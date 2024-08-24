@@ -13,6 +13,13 @@ Future<void> urlFunction(Uri url) async {
   }
 }
 
+Future<void> cUrlFunction(String link) async {
+  final Uri url = Uri.parse(link);
+  if (!await launchUrl(url)) {
+    throw Exception("Could not launch $url");
+  }
+}
+
 Future<void> launchGmail(String email) async {
   final Uri emailUri = Uri(
     scheme: 'mailto',

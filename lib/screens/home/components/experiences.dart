@@ -17,9 +17,21 @@ class Experiences extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Experiences",
-            style: Theme.of(context).textTheme.titleMedium,
+          Row(
+            children: [
+              Text(
+                "Experiences",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(
+                width: defaultPadding / 4,
+              ),
+              const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+                size: 19,
+              )
+            ],
           ),
           const SizedBox(
             height: defaultPadding,
@@ -55,9 +67,21 @@ class Certifications extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Certifications",
-            style: Theme.of(context).textTheme.titleMedium,
+          Row(
+            children: [
+              Text(
+                "Certifications",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(
+                width: defaultPadding / 4,
+              ),
+              const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+                size: 19,
+              )
+            ],
           ),
           const SizedBox(
             height: defaultPadding,
@@ -70,7 +94,7 @@ class Certifications extends StatelessWidget {
                   (index) => Padding(
                         padding: const EdgeInsets.only(right: defaultPadding),
                         child: CertificationCard(
-                          experience: demoCertification[index],
+                          certificate: demoCertification[index],
                         ),
                       )),
             ),

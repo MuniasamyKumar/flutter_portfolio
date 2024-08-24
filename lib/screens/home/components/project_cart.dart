@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/constants.dart';
+import 'package:flutter_portfolio/functions/launch_url.dart';
 import 'package:flutter_portfolio/models/Project.dart';
 import 'package:flutter_portfolio/responsive.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;
-  const ProjectCard({
+  ProjectCard({
     super.key,
     required this.project,
   });
-
+  final Uri github = Uri.parse("https://github.com/MuniasamyKumar");
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +34,9 @@ class ProjectCard extends StatelessWidget {
           ),
           const Spacer(),
           TextButton(
-              onPressed: () {}, 
+              onPressed: () {
+                urlFunction(github);
+              },
               child: const Text(
                 "ReadMore >>",
                 style: TextStyle(color: primaryColor),

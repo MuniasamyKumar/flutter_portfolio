@@ -1,9 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/constants.dart';
+import 'package:flutter_portfolio/firebase_options.dart';
 import 'package:flutter_portfolio/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async{
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,);
   runApp(const MyApp());
 }
 
